@@ -1,0 +1,99 @@
+{
+  "model": "KNN",
+  "fitur": [
+    "attendance_pct",
+    "gpa",
+    "credits_completed",
+    "failed_courses",
+    "weekly_study_hours",
+    "lms_activity_score"
+  ],
+  "target": "1 = berisiko tidak lulus tepat waktu",
+  "rentang_fitur": {
+    "attendance_pct": {
+      "min": 51.2,
+      "max": 100.0,
+      "median": 80.95
+    },
+    "gpa": {
+      "min": 1.22,
+      "max": 4.0,
+      "median": 2.885
+    },
+    "credits_completed": {
+      "min": 33.0,
+      "max": 150.0,
+      "median": 91.0
+    },
+    "failed_courses": {
+      "min": 0.0,
+      "max": 9.0,
+      "median": 2.0
+    },
+    "weekly_study_hours": {
+      "min": 0.0,
+      "max": 21.4,
+      "median": 10.05
+    },
+    "lms_activity_score": {
+      "min": 0.0,
+      "max": 67.0,
+      "median": 27.0
+    }
+  },
+  "metrik_uji": {
+    "Akurasi": 0.767,
+    "Presisi": 0.771,
+    "Recall": 0.925,
+    "F1": 0.841,
+    "F2": 0.889,
+    "ROC-AUC": 0.899
+  },
+  "perbandingan_model": [
+    {
+      "Model": "Logistic Regression",
+      "Akurasi": 0.8,
+      "Presisi": 0.938,
+      "Recall": 0.75,
+      "F1": 0.833,
+      "F2": 0.781,
+      "ROC-AUC": 0.895
+    },
+    {
+      "Model": "KNN",
+      "Akurasi": 0.767,
+      "Presisi": 0.771,
+      "Recall": 0.925,
+      "F1": 0.841,
+      "F2": 0.889,
+      "ROC-AUC": 0.899
+    },
+    {
+      "Model": "Random Forest",
+      "Akurasi": 0.85,
+      "Presisi": 0.919,
+      "Recall": 0.85,
+      "F1": 0.883,
+      "F2": 0.863,
+      "ROC-AUC": 0.893
+    },
+    {
+      "Model": "Gradient Boosting (early stopping)",
+      "Akurasi": 0.783,
+      "Presisi": 0.776,
+      "Recall": 0.95,
+      "F1": 0.854,
+      "F2": 0.909,
+      "ROC-AUC": 0.888
+    },
+    {
+      "Model": "MLP Neural Network (early stopping)",
+      "Akurasi": 0.783,
+      "Presisi": 0.865,
+      "Recall": 0.8,
+      "F1": 0.831,
+      "F2": 0.812,
+      "ROC-AUC": 0.844
+    }
+  ]
+}
